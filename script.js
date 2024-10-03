@@ -114,12 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const receiver = players.find(p => p.name === toPlayer);
 
                 if (sender.balance >= amount) {
-    if (amount > 2000) {
-        const confirmTransfer = confirm(`PROCEDIMENTO DE SEGURANÇA 🔒\nDeseja mesmo transferir R$ ${amount} de ${fromPlayer} para ${toPlayer}. Quer continuar?`);
-        if (!confirmTransfer) return; // Cancela a transferência se o usuário não confirmar
-    }
-}
-
+                    if (amount > 2000) {
+                        const confirmTransfer = confirm(`Deseja mesmo transferir R$ ${amount} de ${fromPlayer} para ${toPlayer}. Quer continuar?`);
+                        if (!confirmTransfer) return; // Cancela a transferência se o usuário não confirmar
+                    }
 
                     sender.balance -= amount;
                     receiver.balance += amount;
