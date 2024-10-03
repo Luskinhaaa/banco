@@ -123,11 +123,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     receiver.balance += amount;
 
                     sender.history.push({ action: '➡️ 𝘛𝘳𝘢𝘯𝘴𝘧𝘦𝘳𝘪𝘥𝘰 𝘱𝘢𝘳𝘢 ' + toPlayer, amount: amount, time: new Date().toLocaleString() });
-                    receiver.history.push({ action: '☑️ Recebido de ' + fromPlayer, amount: amount, time: new Date().toLocaleString() });
+                    receiver.history.push({ action: '☑️ 𝘙𝘦𝘤𝘦𝘣𝘪𝘥𝘰 𝘥𝘦 ' + fromPlayer, amount: amount, time: new Date().toLocaleString() });
 
                     updatePlayerList();
                     document.getElementById('amount').value = ''; // Limpa o campo
-                    showNotification('Transferência realizada com sucesso!'); // Mostra notificação
+                    showNotification('Transferência realizada com sucesso! 🤑'); // Mostra notificação
                 } else {
                     alert('Saldo insuficiente para a transferência.');
                 }
