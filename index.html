@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Banco</h1>
+        <div class="bank">
+            <h2>Jogadores 👥</h2>
+            <div id="playerList"></div>
+            <input type="text" id="playerName" placeholder="Digite o nome do jogador">
+            <button id="addPlayerBtn">Adicionar Jogador ☑️</button>
+
+            <h2>Gerenciar Dinheiro 💹</h2>
+            <select id="fromPlayer">
+                <option value="" disabled selected>De</option>
+            </select>
+            <select id="toPlayer">
+                <option value="" disabled selected>Para</option>
+            </select>
+            <input type="number" id="amount" placeholder="Valor a transferir">
+            <button id="transferBtn">Transferir Dinheiro 💸</button>
+
+            <h2>Adicionar 📥 🔗 Subtrair Dinheiro 📤</h2>
+            <select id="managePlayer">
+                <option value="" disabled selected>Selecionar</option>
+            </select>
+            <input type="number" id="addMoneyAmount" placeholder="Valor">
+            <button id="addMoneyBtn">Adicionar Dinheiro ⬆️</button>
+            <button id="subtractMoneyBtn">Subtrair Dinheiro ⬇️</button>
+        </div>
+
+        <div id="notification" class="notification">Transferência realizada com sucesso!</div>
+
+        <div id="confirmationModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h2>Confirmação de Transferência</h2>
+                <p id="confirmationMessage"></p>
+                <button id="confirmTransferBtn">Aceitar</button>
+                <button id="cancelTransferBtn">Cancelar</button>
+            </div>
+        </div>
+
+        <div id="playerHistory" class="history" style="display: none;">
+            <h2> 🧾<br> Histórico de Transações de <span id="historyPlayerName"></span></h2>
+            <div id="historyDisplay"></div>
+            <button id="closeHistoryBtn">✖️</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
