@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (managePlayer && amount > 0) {
                 const player = players.find(p => p.name === managePlayer);
                 player.balance += amount;
-                player.history.push({ action: 'Adicionado', amount: amount, time: new Date().toLocaleString() });
+                player.history.push({ action: '↪️ 𝘼𝙙𝙞𝙘𝙞𝙤𝙣𝙖𝙙𝙤 ', amount: amount, time: new Date().toLocaleString() });
                 updatePlayerList();
                 document.getElementById('addMoneyAmount').value = ''; // Limpa o campo
             } else {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const player = players.find(p => p.name === managePlayer);
                 if (player.balance >= amount) {
                     player.balance -= amount;
-                    player.history.push({ action: 'Subtraído', amount: amount, time: new Date().toLocaleString() });
+                    player.history.push({ action: '❗ 𝙍𝙚𝙩𝙞𝙧𝙖𝙙𝙤', amount: amount, time: new Date().toLocaleString() });
                     updatePlayerList();
                     document.getElementById('addMoneyAmount').value = ''; // Limpa o campo
                 } else {
