@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-     // Fechar histórico
+    // Fechar histórico
     const closeHistoryBtn = document.getElementById('closeHistoryBtn');
     const playerHistory = document.getElementById('playerHistory');
 
