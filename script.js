@@ -122,8 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     sender.balance -= amount;
                     receiver.balance += amount;
 
-                    sender.history.push({ action: 'Transferido para ' + toPlayer, amount: amount, time: new Date().toLocaleString() });
-                    receiver.history.push({ action: 'Recebido de ' + fromPlayer, amount: amount, time: new Date().toLocaleString() });
+                    sender.history.push({ action: '➡️ Transferido para ' + toPlayer, amount: amount, time: new Date().toLocaleString() });
+                    receiver.history.push({ action: '☑️ Recebido de ' + fromPlayer, amount: amount, time: new Date().toLocaleString() });
 
                     updatePlayerList();
                     document.getElementById('amount').value = ''; // Limpa o campo
