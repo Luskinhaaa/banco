@@ -163,11 +163,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Fechar histórico
+     // Fechar histórico
     const closeHistoryBtn = document.getElementById('closeHistoryBtn');
-    if (closeHistoryBtn) {
+    const playerHistory = document.getElementById('playerHistory');
+
+    if (closeHistoryBtn && playerHistory) {
         closeHistoryBtn.addEventListener('click', () => {
-            document.getElementById('playerHistory').style.display = 'none';
+            playerHistory.style.display = 'none';
         });
     }
 });
