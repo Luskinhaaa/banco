@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34; /* Cor de fundo escura */
+    color: #f5f5f5; /* Cor do texto */
+    margin: 0; /* Remove margens */
+    padding: 20px; /* Padding geral */
+}
+
+.container {
+    max-width: 600px; /* Largura máxima do container */
+    margin: auto; /* Centraliza horizontalmente */
+    background: #3b3f47; /* Cor de fundo do container */
+    padding: 20px; /* Padding interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra */
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente ao passar o mouse */
+}
+
+h1, h2 {
+    text-align: center; /* Centraliza os títulos */
+    margin-bottom: 15px; /* Margem inferior */
+    font-weight: bold; /* Texto em negrito */
+}
+
+input, select, button {
+    width: 100%; /* Largura total dos inputs */
+    padding: 10px; /* Padding interno */
+    margin: 10px 0; /* Margem superior e inferior */
+    border: none; /* Remove bordas padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+input:focus, select:focus {
+    outline: none; /* Remove contorno padrão */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra ao focar */
+}
+
+button {
+    background-color: #f5c300; /* Cor de fundo do botão */
+    color: #282c34; /* Cor do texto do botão */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-weight: bold; /* Texto em negrito */
+    transition: background-color 0.3s, transform 0.3s; /* Animações de transição */
+}
+
+button:hover {
+    background-color: #e5b700; /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Levanta o botão ao passar o mouse */
+}
+
+.history {
+    margin-top: 20px; /* Margem superior */
+    padding: 15px; /* Padding interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    background: #4b4e58; /* Cor de fundo do histórico */
+    border: 1px solid #5a5e66; /* Borda do histórico */
+}
+
+.transaction {
+    margin: 5px 0; /* Margem superior e inferior */
+    padding: 5px; /* Padding interno */
+    border-left: 5px solid transparent; /* Borda esquerda */
+}
+
+.transaction.added {
+    color: green; /* Cor para transações adicionadas */
+    border-left-color: rgba(0, 255, 0, 0.5); /* Cor da borda esquerda */
+}
+
+.transaction.subtracted {
+    color: red; /* Cor para transações subtraídas */
+    border-left-color: rgba(255, 0, 0, 0.5); /* Cor da borda esquerda */
+}
+
+.transaction.transferred {
+    color: blue; /* Cor para transações transferidas */
+    border-left-color: rgba(0, 0, 255, 0.5); /* Cor da borda esquerda */
+}
+
+.notification {
+    display: none; /* Oculta a notificação inicialmente */
+    background-color: white; /* Cor de fundo da notificação */
+    color: black; /* Cor do texto da notificação */
+    padding: 20px; /* Padding interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    position: fixed; /* Fica fixa na tela */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição */
+    z-index: 1000; /* Fica acima de outros elementos */
+    text-align: center; /* Centraliza o texto */
+}
+
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Fica na tela inteira */
+    z-index: 1000; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Adiciona scroll se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Cor de fundo do modal */
+    margin: 15% auto; /* 15% de cima e centralizado */
+    padding: 20px; /* Padding interno */
+    border: 1px solid #888; /* Borda do modal */
+    width: 80%; /* Largura do modal */
+    text-align: center; /* Centraliza o texto */
+}
