@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             notificationDiv.style.display = 'none'; // Esconde a notificação
         }, 2000); // 2000 milissegundos = 2 segundos
-    }    
+    }
 
     // Adiciona jogador
     const addPlayerBtn = document.getElementById('addPlayerBtn');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Mostrar histórico do jogador
+    // Mostrar histórico do jogador por 3 segundos
     window.showPlayerHistory = (index) => {
         const player = players[index];
         const historyDisplay = document.getElementById('historyDisplay');
@@ -56,7 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ).join('') : '<p>Nenhuma transação registrada.</p>';
 
         // Mostrar histórico
-        document.getElementById('playerHistory').style.display = 'block';
+        const playerHistory = document.getElementById('playerHistory');
+        playerHistory.style.display = 'block';
+
+        // Esconder o histórico após 3 segundos
+        setTimeout(() => {
+            playerHistory.style.display = 'none';
+        }, 5000); // 5000 milissegundos = 5 segundos
     };
 
     // Adicionar dinheiro
@@ -162,14 +168,4 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
-
-    // Fechar histórico
-    const closeHistoryBtn = document.getElementById('closeHistoryBtn');
-    const playerHistory = document.getElementById('playerHistory');
-
-    if (closeHistoryBtn && playerHistory) {
-        closeHistoryBtn.addEventListener('click', () => {
-            playerHistory.style.display = 'none';
-        });
-    }
 });
