@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (sender.balance >= amount) {
                     if (amount > 2000) {
-                        const confirmTransfer = confirm(`Deseja mesmo transferir R$ ${amount} de ${fromPlayer} para ${toPlayer}. Quer continuar? 𝘗𝘳𝘰𝘤𝘦𝘥𝘪𝘮𝘦𝘯𝘵𝘰 𝘥𝘦 𝘴𝘦𝘨𝘶𝘳𝘢𝘯ç𝘢 🛡️`);
+                        const confirmTransfer = confirm(`Deseja mesmo transferir R$ ${amount} de ${fromPlayer} para ${toPlayer}. Quer continuar?\n🛂 PROCEDIMENTO DE SEGURANÇA 🔒`);
                         if (!confirmTransfer) return; // Cancela a transferência se o usuário não confirmar
                     }
 
